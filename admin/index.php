@@ -52,10 +52,6 @@ if (!isset($_SESSION['email'])) {
                 <i class="fas fa-book mr-2"></i> <!-- Icon -->
                 Manajemen Resep
             </a>
-            <a href="#" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" onclick="loadSection('settings')">
-                <i class="fas fa-cog mr-2"></i> <!-- Icon -->
-                Setting
-            </a>
             <a href="logout.php" class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700">
                 <i class="fas fa-sign-out-alt mr-2"></i> <!-- Icon -->
                 Logout
