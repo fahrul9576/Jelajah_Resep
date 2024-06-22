@@ -10,22 +10,103 @@ function loadSection(section) {
 }
 function deleteUser(userId) {
     if (confirm("Apakah Anda yakin ingin menghapus pengguna ini?")) {
-        // Lakukan AJAX request untuk menghapus pengguna
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'delete_user.php', true);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.onload = function () {
-            if (xhr.status == 200) {
-                // Handle response jika diperlukan
-                console.log(xhr.responseText);
+        // Lakukan request dengan menggunakan fetch API
+        fetch('delete_user.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                'user_id': userId
+            })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Terjadi kesalahan ketika menghapus pengguna');
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log(data);
                 // Reload halaman atau lakukan operasi lain setelah penghapusan berhasil
                 window.location.reload();
-            } else {
+            })
+            .catch(error => {
                 // Handle kesalahan jika diperlukan
-                console.error('Terjadi kesalahan ketika menghapus pengguna');
-            }
-        }
-        xhr.send('user_id=' + userId);
+                console.error(error);
+            });
     }
 }
 
+function showEditForm(userId, currentUsername, currentEmail) {
+    document.getElementById('editUserId').value = userId;
+    document.getElementById('editUsername').value = currentUsername;
+    document.getElementById('editEmail').value = currentEmail;
+    document.getElementById('editFormModal').classList.remove('hidden');
+}
+
+function editUser() {
+    const userId = document.getElementById('editUserId').value;
+    const username = document.getElementById('editUsername').value;
+    const email = document.getElementById('editEmail').value;
+
+    if (username && email) {
+        fetch('edit_user.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                'user_id': userId,
+                'username': username,
+                'email': email
+            })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Terjadi kesalahan ketika mengedit pengguna');
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log(data);
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    } else {
+        alert("Username dan email tidak boleh kosong");
+    }
+}
+
+function closeEditForm() {
+    document.getElementById('editFormModal').classList.add('hidden');
+}
+
+function deleteRecipe(idResep) {
+    if (confirm("Apakah Anda yakin ingin menghapus resep ini?")) {
+        fetch('delete_resep.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                'id_resep': idResep
+            })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Terjadi kesalahan ketika menghapus resep');
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log(data);
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+}
