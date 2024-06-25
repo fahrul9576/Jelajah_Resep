@@ -90,76 +90,7 @@ include "header.php";
             </button>
     </div>
 
-    <!-- Kategori 1 -->
-    <section id="resep" class="flex items-center justify-center mt-10">
-        <div class="container mx-auto px-5 py-10">
-            <h2 class="text-3xl font-bold mb-4 text-center">Kategori</h2>
-            <div class="grid grid-cols-5 gap-4">
-                <!-- Gambar 1-5 -->
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 1" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 1</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 2" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 2</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 3" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 3</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 4" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 4</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 5" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 5</p>
-                </div>
-                <!-- Gambar 6-10 -->
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 6" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 6</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 7" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 7</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 8" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 8</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 9" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 9</p>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-                        <img src="https://picsum.photos/400/300" alt="Gambar 10" class="object-cover w-full h-full">
-                    </div>
-                    <p class="text-center mt-2">Teks di bawah gambar 10</p>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!-- Section 2 -->
     <section>
         <div class="container mx-auto p-10">
